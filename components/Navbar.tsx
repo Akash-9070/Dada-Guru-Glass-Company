@@ -15,11 +15,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-[#3E362E] text-white">
+    <nav className="bg-[#3E362E] text-white fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center h-16"> {/* Fixed height */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold">Dada Guru Glass</span>
+            <span className="text-xl md:text-2xl font-bold">Dada Guru Glass</span>
           </Link>
           <div className="hidden md:flex space-x-4">
             {navItems.map((item) => (
@@ -59,14 +59,14 @@ export default function Navbar() {
         initial={false}
         animate={{ height: isOpen ? 'auto' : 0 }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden"
+        className="md:hidden overflow-hidden bg-[#3E362E]"
       >
-        <div className="px-4 pt-2 pb-4 space-y-2">
+        <div className="px-4 py-3 space-y-3">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="block hover:text-[#AC8968] transition duration-300"
+              className="block text-center py-2 hover:text-[#AC8968] transition duration-300"
               onClick={() => setIsOpen(false)}
             >
               {item.name}

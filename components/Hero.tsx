@@ -33,10 +33,10 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/glass-background.jpg"
+          src="/hng.jpg"
           alt="Glass Background"
           className="w-full h-full object-cover"
         />
@@ -49,7 +49,7 @@ export default function Hero() {
           className="bg-[#3E362E]/30 backdrop-blur-sm p-4 sm:p-8 rounded-lg"
         >
           <div className="flex flex-col items-center gap-2">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 text-shadow">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 text-shadow">
               <div className="flex flex-wrap justify-center">
                 {["Dada", " ", "Guru", " ", "Glass"].map((word, wordIndex) => (
                   <span key={wordIndex} className="flex">
@@ -97,7 +97,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 1.8 }}
               className="text-[#AC8968] text-sm sm:text-base md:text-lg lg:text-xl mt-2"
             >
-              Since 2009
+              Since 2006
             </motion.p>
           </div>
         </motion.div>

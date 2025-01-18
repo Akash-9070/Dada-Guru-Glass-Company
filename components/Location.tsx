@@ -44,8 +44,8 @@ export default function Location() {
                 <div className="flex items-start">
                   <MapPin className="w-6 h-6 text-[#865D36] mr-4 mt-1" />
                   <p className="text-[#3E362E]">
-                    Plot No.32, Om Nagar, Khirni Phatak,<br />
-                    Khatipura, Jaipur, Rajasthan 302012<br />
+                    117 k5c scheme near lal mandir,<br />
+                    katipura jhotwada jaipur<br />
                     India
                   </p>
                 </div>
