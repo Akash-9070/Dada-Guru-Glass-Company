@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+
 
 const products = [
   { id: 1, name: 'Glass Partition', image: '/pexels-hardeep-29381747.jpg', span: 'col-span-1 row-span-1' },
@@ -66,10 +68,12 @@ export default function Products() {
               }`}
               onClick={() => setSelectedProduct(product)}
             >
-              <img
+              <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                width={800}  // Adjust based on your needs
+                height={600} // Adjust based on your needs
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3E362E]/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -96,10 +100,12 @@ export default function Products() {
               className="bg-white rounded-lg overflow-hidden w-full max-w-4xl max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={selectedProduct.image || "/placeholder.svg"}
                 alt={selectedProduct.name}
                 className="w-full h-auto object-contain max-h-[70vh]"
+                width={1200} // Adjust based on your needs
+                height={800}  // Adjust based on your needs
               />
               <div className="p-4 bg-[#F5F5F5]">
                 <h3 className="text-lg md:text-xl font-semibold text-[#3E362E]">{selectedProduct.name}</h3>

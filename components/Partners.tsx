@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+
 
 const partners = [
   {
@@ -67,11 +69,13 @@ export default function Partners() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="relative w-full h-full rounded-full overflow-hidden group">
-                  <img
-                    src={partner.image || "/placeholder.svg"}
-                    alt={partner.name}
-                    className="w-full h-full object-cover"
-                  />
+                <Image
+                  src={partner.image || "/placeholder.svg"}
+                  alt={partner.name}
+                  className="w-full h-full object-cover"
+                  width={256}  // Specify the actual width
+                  height={256} // Specify the actual height
+                />
                   <div className="absolute inset-0 bg-[#3E362E]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
                     <h3 className="text-xl font-semibold">{partner.name}</h3>
                     <p className="text-[#AC8968]">{partner.role}</p>
