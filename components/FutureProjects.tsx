@@ -2,6 +2,8 @@
 
 import { useRef, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import Image from 'next/image'
+
 
 const projects = [
   { id: 1, name: 'Skyline Tower', image: '/pexels-radis-30216355.jpg', description: 'A 50-story glass facade skyscraper' },
@@ -59,11 +61,13 @@ export default function FutureProjects() {
               className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4"
             >
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.name}
-                  className="w-full h-40 sm:h-48 object-cover"
-                />
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.name}
+                className="w-full h-full object-cover"
+                width={800}  // Adjust based on your needs
+                height={600} // Adjust based on your needs
+              />
                 <div className="p-4">
                   <h3 className="text-lg sm:text-xl font-semibold text-[#3E362E] mb-2">{project.name}</h3>
                   <p className="text-sm sm:text-base text-[#93785B]">{project.description}</p>
