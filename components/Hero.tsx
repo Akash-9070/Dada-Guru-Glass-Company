@@ -35,11 +35,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/hng.jpg"
-          alt="Glass Background"
-          className="w-full h-full object-cover"
-        />
+        
       </div>
       <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
         <motion.div
