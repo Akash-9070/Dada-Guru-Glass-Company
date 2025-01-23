@@ -3,6 +3,7 @@ import Partners from '../components/Partners'
 import Services from '../components/Services'
 import FutureProjects from '../components/FutureProjects'
 import Products from '../components/Products'
+import ProjectGallery from '../components/ProjectGallery'
 import Location from '../components/Location'
 import Contact from '../components/Contact'
 
@@ -18,6 +19,7 @@ export default function Home() {
       <section id="gallery">
         <Products />
       </section>
+      <ProjectGallery />
       <Location />
       <section id="contact">
         <Contact />
