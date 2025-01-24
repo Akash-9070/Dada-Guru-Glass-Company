@@ -6,39 +6,33 @@ import Image from 'next/image'
 const projects = [
   {
     id: 1,
-    title: 'Glass Office Building',
-    location: 'Jaipur, Rajasthan',
-    image: '/pexels-pixabay-262367.jpg',
+    title: 'Glass Office Windows',
+    image: '/products/Screenshot 2025-01-24 223312.png',
   },
   {
     id: 2,
-    title: 'Modern Residence',
-    location: 'Delhi NCR',
-    image: '/pexels-max-vakhtbovych-7031607.jpg',
+    title: 'Glass Door Design',
+    image: '/products/Screenshot 2025-01-24 223337.png',
   },
   {
     id: 3,
-    title: 'Shopping Complex',
-    location: 'Mumbai, Maharashtra',
-    image: '/pexels-pixabay-264507.jpg',
+    title: 'Partition Windows',
+    image: '/products/Screenshot 2025-01-24 223742.png',
   },
   {
     id: 4,
-    title: 'Corporate Headquarters',
-    location: 'Bangalore, Karnataka',
-    image: '/pexels-alex-qian-2343465.jpg',
+    title: ' Premium Office Doors',
+    image: '/products/Screenshot 2025-01-24 223409.png',
   },
   {
     id: 5,
-    title: 'Luxury Hotel',
-    location: 'Udaipur, Rajasthan',
-    image: '/pexels-thorsten-technoman-338504.jpg',
+    title: 'Sliding Glass Doors',
+    image: '/products/Screenshot 2025-01-24 223705.png',
   },
   {
     id: 6,
-    title: 'Restaurant Interior',
-    location: 'Jaipur, Rajasthan',
-    image: '/pexels-rachel-claire-4577410.jpg',
+    title: 'Stylish Glass Doors',
+    image: '/products/Screenshot 2025-01-24 223445.png',
   },
   // Add more projects as needed
 ]
@@ -53,7 +47,7 @@ export default function ProjectGallery() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-[#3E362E] mb-4">Our Projects</h2>
+          <h2 className="text-4xl font-bold text-[#3E362E] mb-4">Our Products</h2>
           <p className="text-[#93785B] text-lg">Transforming spaces across India</p>
         </motion.div>
 
@@ -88,7 +82,6 @@ export default function ProjectGallery() {
                 className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"
               >
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-[#AC8968]">{project.location}</p>
               </motion.div>
             </motion.div>
           ))}
@@ -105,4 +98,4 @@ export default function ProjectGallery() {
       </div>
     </section>
   )
-} 
+}
